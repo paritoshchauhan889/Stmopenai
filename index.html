@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Stm Journals || Paritosh</title>
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts Link For Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/journals-stmjournals-com-wp-media-to-gcp-offload/2022/09/logo_stm.png">
+  <style>
+    .user,
+    .ai {
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bolder;
+      position: relative;
+    }
+
+    .user {
+      border: 1px;
+      border-radius: 30px;
+      border-color: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+    }
+
+    .ai {
+      background-color: #444654;
+      border: 1px;
+      border-radius: 30px;
+      border-color: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+    }
+   .user, .ai div{
+      padding: 10px;
+    }
+
+    .ai .copy-btn {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #2196F3;
+      padding: 20px;
+    }
+.ai img{
+  width: 60px;
+  border-radius: 40px;
+}
+.user div{
+  padding: 10px;
+}
+.user img{
+  width: 60px;
+  border-radius: 40px;
+}
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chat-container" id="chat-display">
+ 
+  </div>
+
+  <!-- Typing container -->
+  <div class="typing-container">
+    <div class="typing-content">
+      <div class="typing-textarea">
+        <textarea id="user-input" spellcheck="false" placeholder="Enter a prompt here" required
+          onkeydown="handleKeyPress(event)"></textarea>
+        <span id="send-btn" class="material-symbols-rounded" onclick="sendMessage()">send</span>
+      </div>
+      <div class="typing-controls">
+        <span id="theme-btn" class="material-symbols-rounded" onclick="toggleTheme()">light_mode</span>
+        <span id="delete-btn" class="material-symbols-rounded" onclick="deleteAllChats()">delete</span>
+      </div>
+    </div>
+  </div>
+
+<script src="./script.js"></script>
+</body>
+
+</html>
